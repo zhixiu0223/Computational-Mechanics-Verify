@@ -7,7 +7,7 @@
 [![Docs: CC BY 4.0](https://img.shields.io/badge/docs-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 
 > 這是課程開課前的公開預覽 repo。選課前你可以先看這裡的內容,判斷這門課適不適合你。
-> 內容會**逐週釋出**,目前只有第 1 週的完整教材,其餘週次會依課程進度陸續 push 上來。
+> 內容會**逐週釋出**,目前已釋出第 1、2 週完整教材,其餘週次會依課程進度陸續 push 上來。
 
 ---
 
@@ -77,11 +77,18 @@
 | 17 | 期末專題工作坊 |
 | 18 | 期末專題發表 + 課程總結 |
 
-## 第 1 週教材先睹為快
+## 已釋出教材先睹為快
 
-[`notebooks/week01_1d_bar_four_methods.ipynb`](notebooks/week01_1d_bar_four_methods.ipynb) ——
-一維桿件靜力問題,四種方法(解析解 / 手算 FEM / scikit-fem 弱形式 / SciPy BVP)交叉比對,
-點上面的 Colab 徽章可以直接在瀏覽器打開跑一次,不用裝環境。
+**第 1 週** [`notebooks/week01_1d_bar_four_methods.ipynb`](notebooks/week01_1d_bar_four_methods.ipynb) ——
+一維桿件靜力問題,四種方法(解析解 / 手算 FEM / scikit-fem 弱形式 / SciPy BVP)交叉比對。
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zhixiu0223/Computational-Mechanics-Verify/blob/main/notebooks/week01_1d_bar_four_methods.ipynb)
+
+**第 2 週** [`notebooks/week02_strong_weak_form.ipynb`](notebooks/week02_strong_weak_form.ipynb) ——
+從統御方程式正式推導強形式與弱形式的等價性,並把第 1 週的常係數桿件推廣成變係數 $EA(x)$,
+示範「節點精確性」為何在更一般的問題中會失效。
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zhixiu0223/Computational-Mechanics-Verify/blob/main/notebooks/week02_strong_weak_form.ipynb)
+
+點徽章可以直接在瀏覽器打開跑一次,不用裝環境。
 
 ## 本 repo 如何成長
 
