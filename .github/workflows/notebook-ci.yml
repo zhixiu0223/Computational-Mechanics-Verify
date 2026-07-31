@@ -1,0 +1,49 @@
+name: Notebook CI
+
+# 每次 push 或 PR 都會重新執行 notebooks/ 底下所有 .ipynb,
+# 確保「教材貼出來但其實跑不動」這種事不會發生在課程 repo 裡。
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch: {}
+
+jobs:
+  execute-notebooks:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11"]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install nbclient nbconvert ipykernel
+          python -m ipykernel install --user --name python3
+
+      - name: Execute all notebooks (fail on error)
+        run: |
+          set -e
+          shopt -s globstar nullglob
+          for nb in notebooks/**/*.ipynb; do
+            echo "=== Executing $nb ==="
+            jupyter execute --kernel_name=python3 "$nb"
+          done
+
+      - name: Confirm no uncommitted notebook diffs after execution
+        run: |
+          git diff --exit-code -- notebooks/ || \
+            (echo "::warning::Notebook outputs changed after re-execution — consider re-committing." )
