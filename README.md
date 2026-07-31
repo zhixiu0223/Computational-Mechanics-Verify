@@ -1,8 +1,8 @@
 # 計算力學方法論——驗證、確效與跨平台交叉比對
 ### Computational Mechanics Methodology: Verification, Validation, and Cross-Platform Comparison
 
-[![Open Week 1 in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<GITHUB_USERNAME>/<REPO_NAME>/blob/main/notebooks/week01_1d_bar_four_methods.ipynb)
-[![Notebook CI](https://github.com/<GITHUB_USERNAME>/<REPO_NAME>/actions/workflows/notebook-ci.yml/badge.svg)](https://github.com/<GITHUB_USERNAME>/<REPO_NAME>/actions/workflows/notebook-ci.yml)
+[![Open Week 1 in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zhixiu0223/Computational-Mechanics-Verify/blob/main/notebooks/week01_1d_bar_four_methods.ipynb)
+[![Notebook CI](https://github.com/zhixiu0223/Computational-Mechanics-Verify/actions/workflows/notebook-ci.yml/badge.svg)](https://github.com/zhixiu0223/Computational-Mechanics-Verify/actions/workflows/notebook-ci.yml)
 [![License: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![Docs: CC BY 4.0](https://img.shields.io/badge/docs-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 
