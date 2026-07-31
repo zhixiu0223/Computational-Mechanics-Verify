@@ -7,7 +7,7 @@
 [![Docs: CC BY 4.0](https://img.shields.io/badge/docs-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 
 > 這是課程開課前的公開預覽 repo。選課前你可以先看這裡的內容,判斷這門課適不適合你。
-> 內容會**逐週釋出**,目前已釋出第 1、2 週完整教材,其餘週次會依課程進度陸續 push 上來。
+> 內容會**逐週釋出**,目前已釋出第 1、2、3 週完整教材,其餘週次會依課程進度陸續 push 上來。
 
 ---
 
@@ -87,6 +87,12 @@
 從統御方程式正式推導強形式與弱形式的等價性,並把第 1 週的常係數桿件推廣成變係數 $EA(x)$,
 示範「節點精確性」為何在更一般的問題中會失效。
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zhixiu0223/Computational-Mechanics-Verify/blob/main/notebooks/week02_strong_weak_form.ipynb)
+
+**第 3 週** [`notebooks/week03_convergence_rate.ipynb`](notebooks/week03_convergence_rate.ipynb) ——
+手算收斂率分析:延續第 2 週的變係數桿件,手動推導並實作二次(P2)元素,系統性地把元素數量
+從 2 掃到 64,量測 $L^2$/能量範數誤差的收斂階數,並與理論預期(P1: 2/1 階,P2: 3/2 階)比對;
+同時用 scikit-fem 的 `ElementLineP2` 反向驗證手算 P2 元素的正確性。
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zhixiu0223/Computational-Mechanics-Verify/blob/main/notebooks/week03_convergence_rate.ipynb)
 
 點徽章可以直接在瀏覽器打開跑一次,不用裝環境。
 
