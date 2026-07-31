@@ -7,7 +7,7 @@
 [![Docs: CC BY 4.0](https://img.shields.io/badge/docs-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 
 > 這是課程開課前的公開預覽 repo。選課前你可以先看這裡的內容,判斷這門課適不適合你。
-> 內容會**逐週釋出**,目前已釋出第 1、2、3 週完整教材,其餘週次會依課程進度陸續 push 上來。
+> 內容會**逐週釋出**,目前已釋出第 1、2、3、4 週完整教材,其餘週次會依課程進度陸續 push 上來。
 
 ---
 
@@ -93,6 +93,12 @@
 從 2 掃到 64,量測 $L^2$/能量範數誤差的收斂階數,並與理論預期(P1: 2/1 階,P2: 3/2 階)比對;
 同時用 scikit-fem 的 `ElementLineP2` 反向驗證手算 P2 元素的正確性。
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zhixiu0223/Computational-Mechanics-Verify/blob/main/notebooks/week03_convergence_rate.ipynb)
+
+**第 4 週** [`notebooks/week04_package_convergence_verification.ipynb`](notebooks/week04_package_convergence_verification.ipynb) ——
+完全丟開手算程式碼,只用 scikit-fem 獨立重跑第 3 週的收斂率實驗,確認收斂階數一致但誤差絕對值
+因積分方式不同而略有差異;接著刻意尋找套件裡「看不到但會影響結果」的預設值(DOF 排序、
+積分階數 `intorder`),並用高頻震盪係數示範「漸近前區間」擬合收斂率沒有意義的陷阱。
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zhixiu0223/Computational-Mechanics-Verify/blob/main/notebooks/week04_package_convergence_verification.ipynb)
 
 點徽章可以直接在瀏覽器打開跑一次,不用裝環境。
 
