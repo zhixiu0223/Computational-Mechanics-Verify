@@ -7,7 +7,7 @@
 [![Docs: CC BY 4.0](https://img.shields.io/badge/docs-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 
 > 這是課程開課前的公開預覽 repo。選課前你可以先看這裡的內容,判斷這門課適不適合你。
-> 內容會**逐週釋出**,目前已釋出第 1、2、3、4 週完整教材,其餘週次會依課程進度陸續 push 上來。
+> 內容會**逐週釋出**,目前已釋出第 1、2、3、4、5 週完整教材,其餘週次會依課程進度陸續 push 上來。
 
 ---
 
@@ -99,6 +99,13 @@
 因積分方式不同而略有差異;接著刻意尋找套件裡「看不到但會影響結果」的預設值(DOF 排序、
 積分階數 `intorder`),並用高頻震盪係數示範「漸近前區間」擬合收斂率沒有意義的陷阱。
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zhixiu0223/Computational-Mechanics-Verify/blob/main/notebooks/week04_package_convergence_verification.ipynb)
+
+**第 5 週** [`notebooks/week05_bar_to_beam.ipynb`](notebooks/week05_bar_to_beam.ipynb) ——
+從桿件跨到樑元素:推導四階統御方程式與弱形式,說明為何樑元素需要 $C^1$ 連續的 Hermite
+形狀函數(而非桿件用的 Lagrange 型),親手用 sympy 推導 Hermite 三次形狀函數並手算組裝,
+重現第 1 週的「四方比對」結構(解析解 / 手算 Hermite FEM / scikit-fem `ElementLineHermite` /
+SciPy BVP 四階 ODE),懸臂樑均佈荷重案例四種方法全部吻合到機器精度。
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zhixiu0223/Computational-Mechanics-Verify/blob/main/notebooks/week05_bar_to_beam.ipynb)
 
 點徽章可以直接在瀏覽器打開跑一次,不用裝環境。
 
